@@ -1,0 +1,12 @@
+[2025-08-05 22:49:24] [ERROR] Error al conectar con la base de datos - No suitable driver found for jdbc:sqlite:blackjack.db
+[2025-08-05 22:49:24] [ERROR] Error al iniciar la aplicación - Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+[2025-08-05 22:49:57] [ERROR] Error al conectar con la base de datos - No suitable driver found for jdbc:sqlite:blackjack.db
+[2025-08-05 22:49:57] [ERROR] Error al iniciar la aplicación - Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+[2025-08-05 22:52:32] [ERROR] Error al conectar con la base de datos - No suitable driver found for jdbc:sqlite:blackjack.db
+[2025-08-05 22:52:32] [ERROR] Error al iniciar la aplicación - Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+[2025-08-05 22:53:06] [ERROR] Error al conectar con la base de datos - No suitable driver found for jdbc:sqlite:blackjack.db
+[2025-08-05 22:53:06] [ERROR] Error al iniciar la aplicación - Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+[2025-08-06 07:17:48] [ERROR] Error al conectar con la base de datos - No suitable driver found for jdbc:sqlite:blackjack.db
+[2025-08-06 07:17:48] [ERROR] Error al iniciar la aplicación - Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+[2025-08-06 07:31:17] [ERROR] Error al conectar con la base de datos - No suitable driver found for jdbc:sqlite:blackjack.db
+[2025-08-06 07:31:17] [ERROR] Error al iniciar la aplicación - Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null

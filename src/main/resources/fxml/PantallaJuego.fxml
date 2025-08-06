@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefWidth="900" prefHeight="700" styleClass="pantalla-juego"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.blackjack.controllers.PantallaJuegoController">
+
+    <!-- Barra superior con información del jugador -->
+    <top>
+        <HBox alignment="CENTER" spacing="50" styleClass="barra-info" prefHeight="60">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+
+            <Label fx:id="lblNombreJugador" text="Jugador" styleClass="label-nombre">
+                <font>
+                    <Font size="20" />
+                </font>
+            </Label>
+
+            <Label fx:id="lblSaldo" text="Saldo: $0" styleClass="label-saldo">
+                <font>
+                    <Font size="18" />
+                </font>
+            </Label>
+
+            <Label fx:id="lblApuesta" text="Apuesta: $0" styleClass="label-apuesta">
+                <font>
+                    <Font size="18" />
+                </font>
+            </Label>
+
+            <Button fx:id="btnVolver" text="Volver al Menú" styleClass="boton-volver"/>
+        </HBox>
+    </top>
+
+    <!-- Área central del juego -->
+    <center>
+        <VBox alignment="CENTER" spacing="30" styleClass="area-juego">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Área del Dealer -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="DEALER" styleClass="label-dealer">
+                    <font>
+                        <Font size="24" />
+                    </font>
+                </Label>
+
+                <HBox fx:id="hboxCartasDealer" alignment="CENTER" spacing="10"
+                      minHeight="100" styleClass="area-cartas"/>
+
+                <Label fx:id="lblValorDealer" text="Valor: 0" styleClass="label-valor">
+                    <font>
+                        <Font size="16" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <!-- Separador -->
+            <Separator prefWidth="600"/>
+
+            <!-- Área del Jugador -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="TUS CARTAS" styleClass="label-jugador">
+                    <font>
+                        <Font size="24" />
+                    </font>
+                </Label>
+
+                <HBox fx:id="hboxCartasJugador" alignment="CENTER" spacing="20"
+                      minHeight="100" styleClass="area-cartas"/>
+
+                <Label fx:id="lblValorJugador" text="Valor: 0" styleClass="label-valor">
+                    <font>
+                        <Font size="16" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <!-- Panel de apuesta -->
+            <VBox fx:id="vboxApuesta" alignment="CENTER" spacing="15"
+                  visible="false" styleClass="panel-apuesta">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+
+                <Label text="Ingresa tu apuesta:" styleClass="label-instruccion">
+                    <font>
+                        <Font size="16"/>
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER" spacing="10">
+                    <Label text="pesos" styleClass="label-simbolo">
+                        <font>
+                            <Font size="18"/>
+                        </font>
+                    </Label>
+
+                    <TextField fx:id="txtApuesta" promptText="0"
+                               prefWidth="150" styleClass="campo-apuesta">
+                        <font>
+                            <Font size="16"/>
+                        </font>
+                    </TextField>
+                </HBox>
+
+                <Label text="Mínimo: $10 - Máximo: $1000" styleClass="label-limite">
+                    <font>
+                        <Font size="12"/>
+                    </font>
+                </Label>
+
+                <Button fx:id="btnApostar" text="Apostar"
+                        styleClass="boton-apostar" prefWidth="150">
+                    <font>
+                        <Font size="16"/>
+                    </font>
+                </Button>
+            </VBox>
+
+            <!-- Mensaje de estado -->
+            <Label fx:id="lblMensaje" text="" styleClass="label-mensaje">
+                <font>
+                    <Font size="18" />
+                </font>
+            </Label>
+        </VBox>
+    </center>
+
+    <!-- Barra inferior con botones de acción -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" styleClass="barra-acciones" prefHeight="80">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Button fx:id="btnPedir" text="Pedir"
+                    styleClass="boton-accion" prefWidth="120" prefHeight="40">
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Button>
+
+            <Button fx:id="btnPlantarse" text="Plantarse"
+                    styleClass="boton-accion" prefWidth="120" prefHeight="40">
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Button>
+
+            <Button fx:id="btnDoblar" text="Doblar"
+                    styleClass="boton-accion-especial" prefWidth="120" prefHeight="40">
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Button>
+
+            <Button fx:id="btnDividir" text="Dividir"
+                    styleClass="boton-accion-especial" prefWidth="120" prefHeight="40">
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Button>
+
+            <Button fx:id="btnNuevaRonda" text="Nueva Ronda"
+                    styleClass="boton-nueva-ronda" prefWidth="140" prefHeight="40">
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>

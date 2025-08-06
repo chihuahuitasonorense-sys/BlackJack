@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<VBox alignment="CENTER" spacing="20" prefWidth="900" prefHeight="700"
+      styleClass="menu-principal" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.blackjack.controllers.MenuPrincipalController">
+
+    <padding>
+        <Insets top="50" right="50" bottom="50" left="50"/>
+    </padding>
+
+    <Label fx:id="lblTitulo" text="♠ BLACKJACK ♠" styleClass="titulo-principal">
+        <font>
+            <Font size="48" />
+        </font>
+    </Label>
+
+    <VBox alignment="CENTER" spacing="15" maxWidth="400">
+        <Label text="Ingresa tu nombre:" styleClass="label-instruccion">
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="txtNombre" promptText="Nombre del jugador"
+                   styleClass="campo-texto" maxWidth="300">
+            <font>
+                <Font size="16"/>
+            </font>
+        </TextField>
+
+        <Label fx:id="lblError" styleClass="label-error" visible="false">
+            <font>
+                <Font size="14"/>
+            </font>
+        </Label>
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="15">
+        <Button fx:id="btnJugar" text="JUGAR" styleClass="boton-principal"
+                prefWidth="200" prefHeight="50">
+            <font>
+                <Font size="18"/>
+            </font>
+        </Button>
+
+        <Button fx:id="btnReglas" text="Ver Reglas" styleClass="boton-secundario"
+                prefWidth="200" prefHeight="40">
+            <font>
+                <Font size="16"/>
+            </font>
+        </Button>
+
+        <Button fx:id="btnSalir" text="Salir" styleClass="boton-salir"
+                prefWidth="200" prefHeight="40">
+            <font>
+                <Font size="16"/>
+            </font>
+        </Button>
+    </VBox>
+
+    <Label text="© 2025 BlackJack Casino" styleClass="label-footer">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+</VBox>
